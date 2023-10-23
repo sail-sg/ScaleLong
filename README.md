@@ -1,7 +1,7 @@
 ## ScaleLong 🐉 <br> <sub><small>Official PyTorch implementation of our paper:<br> "ScaleLong: Towards More Stable Training of Diffusion Model via Scaling Network Long Skip Connection" (NeurIPS 2023)</small></sub>
 
 
-💡ScaleLong is a simple yet effective method that can stabilize the training of UNet-based models for diffusion model (potentially including other tasks that utilize UNet, such as medical segmentation, image segmentation, image-to-image translation, and more). Its core concept involves applying regular or adaptive scaling to the long skip connections of the UNet architecture.
+💡ScaleLong [(paper link)](https://arxiv.org/abs/2310.13545) is a simple yet effective method that can stabilize the training of UNet-based models for diffusion model (potentially including other tasks that utilize UNet, such as medical segmentation, image segmentation, image-to-image translation, and more). Its core concept involves applying regular or adaptive scaling to the long skip connections of the UNet architecture.
 
 <img src="image/fm.png" alt="drawing" width="800"/>
 
@@ -81,16 +81,16 @@ accelerate launch --multi_gpu --num_processes 1 --mixed_precision fp16 --main_pr
 
 
 
-<!-- ## References
-If you find the code useful for your research, please consider citing -->
-<!-- ```bib
-@inproceedings{bao2022all,
-  title={All are Worth Words: A ViT Backbone for Diffusion Models},
-  author={Bao, Fan and Nie, Shen and Xue, Kaiwen and Cao, Yue and Li, Chongxuan and Su, Hang and Zhu, Jun},
-  booktitle = {CVPR},
+## References
+If you find the code useful for your research, please consider citing
+ ```bib
+@inproceedings{huang2022scale,
+  title={ScaleLong: Towards More Stable Training of Diffusion Model via Scaling Network Long Skip Connection},
+  author={Huang, Zhongzhan and Pan, Zhou and Yan, Shuicheng and Lin, Liang},
+  booktitle = {NeurIPS},
   year={2023}
 }
-``` -->
+```
 
 This implementation is based on
 * [UViT](https://github.com/baofff/U-ViT/tree/main) ( a novel UNet-based architecture for image generation )
